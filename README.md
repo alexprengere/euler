@@ -1,2 +1,1 @@
-# euler
-https://projecteuler.net
+# Python (3) solutions of Project Euler
