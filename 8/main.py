@@ -15,10 +15,10 @@ if __name__ == '__main__':
     with open(filename) as f:
         digits = [int(i) for row in f for i in row.strip()]
 
-    max_, max_i = -1, None
+    max_ = -1
     for i, _ in enumerate(digits):
         product = reduce(mul, digits[i:i + n])
         if product > max_:
-            max_, max_i = product, i
+            max_ = product
 
-    print(max_, digits[max_i:max_i + n])
+    print(max_)
