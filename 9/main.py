@@ -18,6 +18,7 @@ def find_pythagorean(total):
                 return a, b, int(c)
     raise ValueError('Could not find Pythagorean triplet')
 
+
 if __name__ == '__main__':
     total = int(sys.argv[1])
     a, b, c = find_pythagorean(total)
