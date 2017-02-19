@@ -7,6 +7,7 @@ $ python main.py digits.txt 13
 
 import sys
 from operator import mul
+from functools import reduce
 
 
 if __name__ == '__main__':
