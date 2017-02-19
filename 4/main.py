@@ -19,18 +19,15 @@ def get_divisors(i):
             yield j, i // j
 
 
+def find_palindrome(digits):
+    for i in range((10 ** digits) ** 2, 0, -1):
+        if is_palindrome(i):
+            for a, b in get_divisors(i):
+                if len(str(a)) == digits and len(str(b)) == digits:
+                    return a, b
+
+
 if __name__ == '__main__':
     digits = int(sys.argv[1])
-    found = False
-
-    for i in range((10 ** digits) ** 2, 0, -1):
-        if not is_palindrome(i):
-            continue
-
-        for a, b in get_divisors(i):
-            if len(str(a)) == digits and len(str(b)) == digits:
-                print('{} = {} * {}'.format(i, a, b))
-                found = True
-                break
-        if found:
-            break
+    a, b = find_palindrome(digits)
+    print('{} = {} * {}'.format(a * b, a, b))
