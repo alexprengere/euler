@@ -7,6 +7,7 @@ $ python main.py 1000
 
 import sys
 
+
 def spell(n):
     digits = [
         'zero', 'one', 'two', 'three', 'four',
